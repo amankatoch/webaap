@@ -1,0 +1,21 @@
+<div class="jumbotron testing">
+  <h1>My Bathroom</h1>
+  <p class="lead">
+    Our Service is not yet available in the hole country.
+    Please enter your location or your postcode to see if we can
+    supply you:
+    <form >
+
+    <input type="text" ng-model="zipcode" placeholder="Zip Or City" ><br><br>
+      <p>{{zipcode}}</p>
+    <button id="get_cities" ng-click="load_cities()" required>NEXT</button>
+
+  </form>
+  </p>
+ {{messages}}
+</div>
+
+<div class="row marketing">
+
+</div>
+

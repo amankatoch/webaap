@@ -1,0 +1,56 @@
+<style>
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+  animation: 0.5s ease 0s normal none 1 running ngdialog-flyin;
+  background: none repeat scroll 0 0 #f0f0f0;
+  border-radius: 5px;
+  color: #444;
+  font-family: "Helvetica",sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 50%;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+  
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content > img{
+  width: 100%;
+  max-height: 400px;
+}
+
+.ngdialog.ngdialog-theme-default {
+  padding-bottom: 160px;
+  padding-top: 80px;
+}
+
+
+
+</style>
+<div class='tiling_content'>
+<h2 class="text-center">Tiling</h2>
+<h4 class="text-center">tile material and pattern</h4>
+
+
+<! ng repeat looop -->
+
+<div class="panel panel-default" ng-repeat="(key,value) in data_tile">
+
+<span ><h3 class="text-center">{{key}}</h3></span>
+  <div class="panel-body">
+    <div class="row" >
+     <div class="col-xs-6 col-md-3" ng-repeat="tile in value track by $index">
+        <a href="" class="thumbnail">
+         <img ng-class="myCssVar" src="{{tile.ImageURL.S}}" alt="..." ng-click="clickToOpen(tile.ImageURL.S,tile.Producer.S,tile.Price.N)">
+          <span class="label label-info text center">{{tile.Name.S}}</span>
+        </a>
+     </div>
+    </div>
+  </div>
+
+</div>
+
+<! end of ng repeat loop >
+
+
+</div>
